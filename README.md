@@ -1,6 +1,6 @@
 # meus-portfolios
 
- <h1>Repositório criado para guardar as versões dos meus portfólios!</h1>
+ <h2>Repositório criado para guardar as versões dos meus portfólios!</h2>
 
  <strong>A VISUALIZAÇÃO ABAIXO IRÁ ABRIR NO GITHUB PAGES! </strong>
 
