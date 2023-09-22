@@ -1,0 +1,407 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@font-face {
+    font-family: 'Cabecalho';
+    src: url('../fontes/KGHAPPY.ttf') format('truetype');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'divisao';
+    src: url('../fontes/ROLNER.otf') format('opentype');
+    font-weight: lighter;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --cor0: #e5f7f8;
+    --cor1: #04BEEF;
+    --cor2: #0B99C9;
+    --cor3: #1576A3;
+    --cor4: #1A547C;
+    --cor5: #203054;
+
+    --fonte-cabecalho: 'Cabecalho',Arial, sans-serif;
+    --fonte-h1: 'Chakra Petch', sans-serif;
+    --fonte-h2: 'Anton', sans-serif;
+    --font-padrao: 'Arial', Helvetica, sans-serif;
+    --fonte-divisao: 'divisao', Helvetica, sans-serif;
+
+    --bg-p: #04bcef4b;
+    --bg-1: #b5f3f7b0;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--font-padrao);
+}
+
+header {
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor5));
+    padding-bottom: 20px;
+
+}
+
+header > nav {
+    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.466);
+    border-radius: 0px 0px 6.5px 6.5px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--cor2);
+    opacity: 0.5;
+    transition: 1.6s;
+
+    margin-bottom: 33px;
+    padding: 15px;
+}
+
+header > nav:hover{
+    background-color: var(--cor1);
+    opacity: 1;
+}
+
+header > nav > a{
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: 0.7s;
+
+    margin: 0px 20px;
+    padding: 5px;
+}
+
+header > nav > a:hover{
+    background-color: var(--cor3);
+    text-decoration: underline;
+    color: #ececec
+}
+
+header > h1 {
+    font-family: var(--fonte-cabecalho);
+    font-weight: lighter;
+    font-size: 4em;
+    color: white;
+    text-align: center;
+
+    word-wrap: break-word;
+
+}
+
+header > aside {
+    background-image: linear-gradient(to left, var(--cor4), transparent);
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    max-width: 490px;
+    min-width: auto;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+header > aside > h2 {
+    text-align: center;
+    text-shadow: 2px 2px 3.5px rgba(0, 0, 0, 0.404);
+    font-size: 1.7em;
+
+    margin-bottom: 8px;
+}
+
+header > aside > q {
+    font-size: 1.2em;
+    text-indent: 5.2em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.39);
+    
+    display: block;
+    margin: auto;
+}
+
+header > aside > p {
+    text-indent: 5.6em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.39);
+    font-size: 1.1em;
+    font-weight: bold;
+
+    margin: auto;
+    margin-top: 5px;
+}
+
+main {
+    background-color: var(--cor0);
+
+    max-width: 1760px;
+    min-width: 300px;
+    margin: auto;
+    padding: 30px;
+    padding-bottom: 80px;
+}
+
+main h1 {
+    font-family: var(--fonte-h1);
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1em;
+    color: var(--cor5);
+}
+
+/* Media Querie do titulo para celular */
+
+@media all and (max-width: 430px){
+    main h1 {
+        font-size: 3em;
+    }
+}
+
+section#topo > h1 {
+  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.384);
+   
+
+    margin: auto;
+    padding-left: 10%;
+    display: block;
+}
+
+section.separador > h1.divisao{
+    font-family: var(--fonte-divisao);
+    font-size: 7em;
+    font-weight: lighter;
+    background-image: linear-gradient(-45deg, var(--cor1), var(--cor5));
+    color: var(--cor0);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.274);
+    border-radius: 15px;
+    text-align: center;
+
+    margin: 100px 0px;
+    padding: 20px 0px;
+    display: block;
+}
+
+@media screen and (max-width: 430px) {
+    section.separador > h1.divisao {
+        font-size: 3em;
+    }
+}
+
+section#me-conhecendo > h2 {
+    font-family: var(--fonte-h2);
+    font-size: 4.4em;
+    font-weight: normal;
+    text-shadow: 2.4px 2.4px 4px rgba(0, 0, 0, 0.349);
+    color: var(--cor4);
+
+    padding-left: 10%;
+    margin: 25px auto 25px auto;
+}
+
+@media all and (max-width: 430px){
+    section#me-conhecendo > h2 {
+        font-size: 2.6em;
+    }
+}
+
+div#sobre-mim {
+
+    display: flex;
+    width: 100%;
+}
+
+div#sobre-mim img {
+    border-radius: 50%;
+
+    margin-left: 160px;
+}
+
+@media screen and (max-width: 879px) {
+    div#sobre-mim img {
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 430px){
+    div#sobre-mim img {
+        margin-left: 50px;
+    }
+}
+
+main p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    text-align: justify;
+    text-indent: 1.5em;
+    background-color: var(--bg-p);
+    border-radius: 5px 25px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.363);
+    border-top: 2.5px solid var(--cor4);
+    border-right: 2.5px solid var(--cor4);
+
+   
+    max-width: 600px;
+    padding: 20px;
+    max-height: 400px;
+    
+}
+
+img.img-adaptada {
+    margin-top: -140px;
+}
+
+div.container {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 910px) {
+    .container{
+        width: 100%;
+    }
+
+    main p{
+        font-size: 1.13em;
+        max-height: 700px;
+        max-width: 400px;
+        margin-bottom: 5px;
+    }
+
+    img.img-adaptada{
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    main p {
+        max-width: 650px;
+        line-height: 1.5em;
+    }
+
+    img.img-adaptada {
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    main p {
+        max-height: 1000px;
+        font-size: 1em;
+    }
+
+    img.img-adaptada {
+        margin: auto;
+    }
+}
+
+
+aside.container{
+    background-color: var(--cor4);
+    border-radius: 10px;
+    box-shadow: 2.2px 2.2px 3px rgba(0, 0, 0, 0.274);
+
+    max-width: 830px;
+    min-width: 375px;
+    
+    margin: auto;
+    margin-top: 50px;
+    
+}
+
+aside.container > h2 {
+    font-family: var(--fonte-h2);
+    font-weight: normal;
+    font-size: 2.9em;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    text-shadow: 2.4px 2.4px 4px rgba(0, 0, 0, 0.322);
+    text-align: center;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.212);
+
+    padding: 15px;
+    max-width: 450px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+aside.container ul{
+    list-style-position: inside;
+    list-style: none;
+    columns: 2;
+
+    padding: 10px;
+}
+
+aside.container li {
+
+    font-size: 1.2em;
+
+    margin-bottom: 45px;
+    padding: 5px;
+    position: relative;
+}
+
+aside.container a{
+
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.226);
+    color: var(--cor0);
+
+
+    position: absolute;
+    top: 18px;
+    padding: 5px;
+}
+
+aside.container p {
+    color: var(--cor0);
+    font-size: 1.1em;
+    background-color: var(--cor2);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.267);
+
+    padding: 15px;
+}
+
+/* MEDIA SCREEN DO ASIDE PARA DESKTOP */
+
+@media screen and (max-width: 910px){
+    aside.container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    aside.container a {
+        font-size: 0.8em;
+    }
+
+    aside.container p {
+        font-size: 1em;
+    }
+}
+
+footer.rodape{
+    background-color: var(--cor3);
+}
