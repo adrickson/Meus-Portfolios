@@ -1,6 +1,8 @@
 # meus-portfolios
 
- repositório criado para guardar as versões dos meus portfólios
+ Repositório criado para guardar as versões dos meus portfólios!
+
+ <strong> VERSÃO ATUAL: 1.0 </strong>
 
  Veja os Links abaixo para acessar as versões do Portfólio:
 
