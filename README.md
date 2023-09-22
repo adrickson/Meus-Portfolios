@@ -1,9 +1,11 @@
 # meus-portfolios
 
- Repositório criado para guardar as versões dos meus portfólios!
+ <h1>Repositório criado para guardar as versões dos meus portfólios!</h1>
 
- <strong> VERSÃO ATUAL: <a href="portfolio1.0/index.html">1.0</a> </strong>
+ <strong>A VISUALIZAÇÃO ABAIXO IRÁ ABRIR NO GITHUB PAGES! </strong>
 
- Veja os Links abaixo para acessar as versões do Portfólio:
+ <strong> VERSÃO ATUAL: <a href="https://adrickson.github.io/meus-portfolios/portfolio1.0/index.html">1.0</a> </strong>
 
- <a href="portfolio1.0/index.html">Versão 1.0 </a>
+ Veja os Links abaixo para acessar as versões dos Portfólios:
+
+ <a href="https://adrickson.github.io/meus-portfolios/portfolio1.0/index.html">Versão 1.0 </a>
