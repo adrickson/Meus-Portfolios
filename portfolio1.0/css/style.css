@@ -407,13 +407,24 @@ aside.container p {
 @media all and (max-width: 430px){
 
     aside.container {
-        margin: auto;
+        margin-left: -15px;
     }
 
    aside.container > h2 {
     font-size: 1.8em;
 
     max-width: 280px
+   }
+
+   aside.container a {
+    font-size: 0.67em;
+   }
+
+   aside.container p {
+    font-size: 0.8em;
+    text-indent: 0px;
+
+    
    }
 }
 
