@@ -402,6 +402,21 @@ aside.container p {
     }
 }
 
+/* MEDIA SCREEN DO ASIDE PARA CELULAR */
+
+@media all and (max-width: 430px){
+
+    aside.container {
+        margin: auto;
+    }
+
+   aside.container > h2 {
+    font-size: 1.8em;
+
+    max-width: 280px
+   }
+}
+
 footer.rodape{
     background-color: var(--cor3);
 }
