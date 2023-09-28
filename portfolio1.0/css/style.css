@@ -458,15 +458,38 @@ aside.container p {
     opacity: 1;
 }
 
+div#alinhamento__horizontal{
+    
+    position: relative;
+    padding-bottom: 25px;
+    
+}
+
 .atalhos__footer {
     background-color: var(--cor5);
     border-radius: 30px 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.342);
 
     max-width: 500px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: 20px 17% 30px 10%;
+    display: inline-block;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* RESPONSIVIDADE CAIXA DE ATALHOS PARA DESKTOP */
+
+@media all and (max-width: 1292px){
+    .atalhos__footer {
+
+        display: block;
+        max-width: 460px;
+        margin: auto;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 0px;
+    }
 }
 
 .atalhos__footer h2 {
@@ -501,4 +524,34 @@ aside.container p {
 
 .atalhos__links p:hover{
     box-shadow: 0px 0px 15px var(--cor2);
+}
+
+.container__horizontal {
+    background-color: var(--cor1);
+    color: var(--cor5);
+    font-family: var(--font-padrao);
+    font-size: 1.5em;
+    border-radius: 20px 10px;
+    border-top: 3px solid var(--cor3);
+    border-right: 3px solid var(--cor3);
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.288);
+
+    max-width: 500px;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+/* RESPONSIVIDADE PARA DESKTOP CONTAINER HORIZONTAL */
+
+@media all and (max-width: 1292px) {
+    .container__horizontal {
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 430px;
+    }
 }
