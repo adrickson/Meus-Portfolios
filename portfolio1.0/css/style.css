@@ -171,6 +171,14 @@ section#topo > h1 {
     display: block;
 }
 
+/* MEDIA SCREEN DO TITULO TOPO PARA DESKTOP */
+
+@media all and (max-width: 910px){
+    section#topo > h1 {
+        font-size: 4em;
+    }
+}
+
 section.separador > h1.divisao{
     font-family: var(--fonte-divisao);
     font-size: 7em;
@@ -185,6 +193,17 @@ section.separador > h1.divisao{
     padding: 20px 0px;
     display: block;
 }
+
+/* MEDIA SCRREN DO SEPARADOR PARA DESKTOP */
+
+@media all and (max-width: 910px){
+    
+    section.separador > h1.divisao{
+        font-size: 5em;
+    }
+}
+
+/* MEDIA SCREEN DO SEPARADOR PARA CELULAR */
 
 @media screen and (max-width: 430px) {
     section.separador > h1.divisao {
@@ -203,33 +222,59 @@ section#me-conhecendo > h2 {
     margin: 25px auto 25px auto;
 }
 
-@media all and (max-width: 430px){
+/* MEDIA SCREEN PARA DESKTOP DO H2 "QUEM SOU EU?" */
+
+@media all and (max-width: 910px){
     section#me-conhecendo > h2 {
-        font-size: 2.6em;
+        text-align: center;
+        padding: 0px;
     }
 }
 
-div#sobre-mim {
+/* MEDIA SCREEN PARA CELULARES DO H2 "QUEM SOU EU?" */
+@media all and (max-width: 430px){
+    section#me-conhecendo > h2 {
+        font-size: 2.6em;
+        text-align: center;
+        padding: 0px;
+    }
+}
+
+div.sobre-mim {
 
     display: flex;
     width: 100%;
 }
 
-div#sobre-mim img {
+div.sobre-mim img {
     border-radius: 50%;
 
     margin-left: 160px;
 }
 
-@media screen and (max-width: 879px) {
-    div#sobre-mim img {
+/* MEDIA SCREEN PARA DESKTOP DA IMAGEM ABAIXO DO "QUEM SOU EU?" */
+
+@media screen and (max-width: 910px) {
+
+    .container__img__centro {
         margin: auto;
     }
+
+    div.container__img__centro img {
+        margin: auto;
+    }
+
 }
 
+/* MEDIA SCREEN PARA CELULAR DA IMAGEM DO AVATAR "QUEM SOU EU?" */
+
 @media all and (max-width: 430px){
-    div#sobre-mim img {
-        margin-left: 50px;
+    div#container__img__centro {
+        margin: auto;
+    }
+
+    div#container__img__centro img {
+        margin: auto;
     }
 }
 
@@ -251,7 +296,7 @@ main p {
     
 }
 
-img.img-adaptada {
+img#img-adaptada {
     margin-top: -140px;
 }
 
@@ -262,6 +307,8 @@ div.container {
     justify-content: space-around;
     margin-top: 40px;
 }
+
+/* MEDIA SCREEN PARA DESKTOP */
 
 @media screen and (max-width: 910px) {
     .container{
@@ -275,10 +322,11 @@ div.container {
         margin-bottom: 5px;
     }
 
-    img.img-adaptada{
-        margin-left: 80px;
-        margin-top: 5px;
+    img#img-adaptada {
+        margin: auto;
+        margin-top: 20px;
     }
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -299,7 +347,9 @@ div.container {
 
 }
 
-@media screen and (max-width: 375px) {
+/* MEDIA SCRREN PARA CELULARES */
+
+@media screen and (max-width: 430px) {
     .container{
         width: 100%;
         flex-direction: column;
@@ -312,6 +362,7 @@ div.container {
 
     img.img-adaptada {
         margin: auto;
+        margin-top: 20px;
     }
 }
 
