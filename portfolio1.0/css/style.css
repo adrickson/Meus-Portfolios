@@ -88,12 +88,29 @@ header > nav > a:hover{
 header > h1 {
     font-family: var(--fonte-cabecalho);
     font-weight: lighter;
-    font-size: 4em;
+    font-size: 5.7em;
     color: white;
     text-align: center;
 
     word-wrap: break-word;
 
+}
+
+/* MEDIA QUERIE DO H1 DO HEADER PARA DESKTOP */
+
+@media all and (max-width: 910px){
+    header > h1 {
+        font-size: 3.8em;
+    }
+}
+
+/* MEDIA QUERIE DO H1 DO HEADER PARA ALGUNS DISPOSITIVOS MOVEIS */
+
+@media all and (max-width: 430px){
+    header > h1 {
+        font-size: 2.8em;
+        margin-bottom: 14px;
+    }
 }
 
 header > aside {
@@ -108,12 +125,44 @@ header > aside {
     margin-right: 5px;
 }
 
+/* MEDIA QUERIE DO ASIDE DO HEADER PARA DESKTOP */
+
+@media all and (max-width: 910px) {
+    header > aside {
+        max-width: 300px;
+    }
+}
+
+/* MEDIA QUERIA DO ASIDE DO HEADER PARA ALGUNS DISPOSITIVOS MOVEIS */
+
+@media all and (max-width: 430px){
+    header > aside {
+        max-width: 200px;
+    }
+}
+
 header > aside > h2 {
     text-align: center;
     text-shadow: 2px 2px 3.5px rgba(0, 0, 0, 0.404);
     font-size: 1.7em;
 
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+/* MEDIA QUERIE DO H2 DO ASIDE DO HEADER PARA DESKTOP*/
+
+@media all and (max-width: 910px){
+    header > aside > h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* MEDIA QUERIA DO H2 DO ASIDE DO HEADER PARA ALGUNS DISPOSITIVOS MOVEIS */
+
+@media all and (max-width: 430px){
+    header > aside > h2 {
+        font-size: 1em;
+    }
 }
 
 header > aside > q {
@@ -125,6 +174,25 @@ header > aside > q {
     margin: auto;
 }
 
+/* MEDIA QUERIE DA CITAÇÃO "Q" DO ASIDE PARA DESKTOP */
+
+@media all and (max-width: 910px){
+    header > aside > q {
+        font-size: 1.1em;
+        text-indent: 0em;
+
+        margin-left: 15px;
+    }
+}
+
+/* MEDIA QUERIA DA CITAÇÃO "Q" DO ASIDE PARA ALGUNS DISPOSITIVOS MOVEIS */
+
+@media all and (max-width: 430px) {
+    header > aside > q {
+        font-size: 0.9em;
+    }
+}
+
 header > aside > p {
     text-indent: 5.6em;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.39);
@@ -133,6 +201,24 @@ header > aside > p {
 
     margin: auto;
     margin-top: 5px;
+}
+
+/* MEDIA QUERIE DO PARÁGRAFO DO ASIDE DO HEADER*/
+
+@media all and (max-width: 910px) {
+    header > aside > p {
+        font-size: 1em;
+        text-indent: 0.7em;
+        margin-top: 10px;
+    }
+}
+
+/* MEDIA QUERIE DO PARÁGRAFO DO ASIDE DO HEADER PARA ALGUNS DISPOSITIVOS MOVEIS */
+
+@media all and (max-width: 430px){
+    header > aside > p {
+        font-size: 0.9em;
+    }
 }
 
 main {
@@ -153,12 +239,23 @@ main h1 {
     color: var(--cor5);
 }
 
-/* Media Querie do titulo para celular */
+main a {
+    text-decoration: none;
+    font-family: var(--font-padrao);
+    font-weight: bold;
+    color: var(--cor5);
+}
 
-@media all and (max-width: 430px){
-    main h1 {
-        font-size: 3em;
-    }
+main a:hover{
+    text-decoration: underline;
+}
+
+main a:active {
+    color: var(--cor2);
+}
+
+main a.emoji::after{
+    content: '\1F913';
 }
 
 section#topo > h1 {
@@ -176,6 +273,14 @@ section#topo > h1 {
 @media all and (max-width: 910px){
     section#topo > h1 {
         font-size: 4em;
+    }
+}
+
+/* MEDIA QUERIE DO H1 DA SECTION DO TOPO PARA ALGUNS CELULARES */
+
+@media all and (max-width: 430px) {
+    section#topo > h1 {
+        font-size: 3em;
     }
 }
 
@@ -207,7 +312,7 @@ section.separador > h1.divisao{
 
 @media screen and (max-width: 430px) {
     section.separador > h1.divisao {
-        font-size: 3em;
+        font-size: 3.7em;
     }
 }
 
@@ -234,7 +339,7 @@ section#me-conhecendo > h2 {
 /* MEDIA SCREEN PARA CELULARES DO H2 "QUEM SOU EU?" */
 @media all and (max-width: 430px){
     section#me-conhecendo > h2 {
-        font-size: 2.6em;
+        font-size: 3.2em;
         text-align: center;
         padding: 0px;
     }
