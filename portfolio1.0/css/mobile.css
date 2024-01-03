@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@font-face {
+    font-family: 'Cabecalho';
+    src: url('../fontes/KGHAPPY.ttf') format('truetype');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'divisao';
+    src: url('../fontes/ROLNER.otf') format('opentype');
+    font-weight: lighter;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --cor0: #e5f7f8;
+    --cor1: #04BEEF;
+    --cor2: #0B99C9;
+    --cor3: #1576A3;
+    --cor4: #1A547C;
+    --cor5: #203054;
+
+    --fonte-cabecalho: 'Cabecalho',Arial, sans-serif;
+    --fonte-h1: 'Chakra Petch', sans-serif;
+    --fonte-h2: 'Anton', sans-serif;
+    --font-padrao: 'Arial', Helvetica, sans-serif;
+    --fonte-divisao: 'divisao', Helvetica, sans-serif;
+
+    --bg-p: #04bcef4b;
+    --bg-1: #b5f3f7b0;
+}
+
+header.cabecalho {
+    background-image: none;
+    background-color: var(--cor5);
+}
+
+header.cabecalho > h1 {
+    font-size: 2.5em;
+}
+
+nav.menu__nav:hover{
+    background-color: var(--cor2);
+}   
+
+nav.menu__nav > a {
+    font-size: 1.2em;
+}
+
+div.atalhos__footer > h2 {
+    font-size: 2.3em;
+}
+
+div.atalhos__links > a {
+    font-size: 0.9em;
+}
+
+div.container__horizontal > p {
+    font-size: 0.8em;
+}

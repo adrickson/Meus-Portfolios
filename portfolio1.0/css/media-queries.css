@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px){/* TABLET */
+
+    header.cabecalho > h1 {
+        font-size: 3em;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1294px) {
+
+    header.cabecalho > h1 {
+        font-size: 4em;
+    }
+
+    nav.menu__nav > a {
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (min-width: 1294px) {
+
+    header.cabecalho > h1 {
+        font-size: 4em;
+    }
+
+    nav.menu__nav > a {
+        font-size: 1.5em;
+    }
+
+    div.atalhos__footer > h2 {
+        font-size: 3em;
+    }
+
+    div.atalhos__links{
+        display: flex;
+        margin-left: -55px;
+        margin-bottom: 20px;
+
+        height: 55px;
+    }
+    div.atalhos__links > a {
+        font-size: 1em;
+        display: inline-block;
+  
+        margin-left: 5px;
+    }
+
+}
