@@ -30,6 +30,12 @@
     }
 }
 
+@keyframes borda-animada {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -120,6 +126,8 @@ header > h1 {
 main {
     width: 90vw;
     background-color: var(--cor5);
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
 
     margin: auto;
     margin-top: 10px;
@@ -134,6 +142,8 @@ section.container__flex {
 
     margin: auto;
     padding: 10px;
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
 }
 
 div.titulo__flex > h1 {
@@ -154,6 +164,8 @@ div.container__img img{
     animation: flutuar 5s ease-in-out infinite;
     border-top: 2px solid var(--cor2);
     border-bottom: 2px solid var(--cor2);
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
 
     display: block;
     margin: auto;
@@ -165,6 +177,59 @@ div.container__img img#coding-p {
 
 div.container__img img#coding-m {
     display: none;
+}
+
+section.container__projetos {
+
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+ul.lista__flex {
+    list-style-type: none;
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+ul.lista__flex div {
+    background-color: var(--cor5);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    width: 220px;
+    height: 180px;
+    margin: 10px;
+    position: relative;
+}
+
+ul.lista__flex div::before{
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 180%;
+    background: linear-gradient(180deg,#6937b9, var(--cor4), var(--cor3), var(--cor2), #6937b9);
+
+    animation: borda-animada 4s linear infinite;
+}
+
+ul.lista__flex div::after {
+    content: "";
+    position: absolute;
+    background-color: var(--cor3);
+    background: url('../imagens/em-breve.png') no-repeat;
+    background-position: top center;
+    background-size: cover;
+    border-radius: inherit;
+    inset: 4px;
 }
 
 

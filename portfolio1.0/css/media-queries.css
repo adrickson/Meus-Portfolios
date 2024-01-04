@@ -2,9 +2,35 @@
 
 @media screen and (min-width: 768px) and (max-width: 992px){/* TABLET */
 
+    @keyframes borda-animada {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    :root{
+        --cor0: #e5f7f8;
+        --cor1: #04BEEF;
+        --cor2: #0B99C9;
+        --cor3: #1576A3;
+        --cor4: #1A547C;
+        --cor5: #203054;
+    
+        --fonte-cabecalho: 'Cabecalho',Arial, sans-serif;
+        --fonte-h1: 'Chakra Petch', sans-serif;
+        --fonte-h2: 'Anton', sans-serif;
+        --font-padrao: 'Arial', Helvetica, sans-serif;
+        --fonte-divisao: 'divisao', Helvetica, sans-serif;
+    
+        --bg-p: #04bcef4b;
+        --bg-1: #b5f3f7b0;
+    }
+
     header.cabecalho > h1 {
         font-size: 3em;
     }
+
+
 
     div#alinhamento__horizontal {
         flex-direction: row;
@@ -69,7 +95,7 @@
     /*CORPO DO SITE*/
 
     main {
-        width: 700px;
+        width: 770px;
     }
 
     section.container__flex {
@@ -82,7 +108,7 @@
 
     div.titulo__flex h1 {
         animation: back-animado 20s ease infinite;
-        background-image: linear-gradient(-45deg,rgb(32, 80, 153), var(--cor5), var(--cor4), var(--cor3), rgb(105, 55, 185), rgb(32, 80, 153));
+        background-image: linear-gradient(-45deg,rgb(32, 80, 153), var(--cor5), var(--cor4), var(--cor3), #6937b9, rgb(32, 80, 153));
         background-size: 300% 300%;
         font-size: 3em;
         border-radius: 10px 20px;
@@ -93,6 +119,30 @@
         margin-bottom: 0px;
         margin-right: 10px;
         padding: 7px;
+    }
+
+
+    ul.lista__flex {
+        list-style-type: none;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    ul.lista__flex li {
+        padding: 10px;
+    }
+
+    ul.lista__flex div {
+        margin: 0px;
+        transition: 0.4s;
+    }
+
+    ul.lista__flex div:hover {
+        box-shadow: 0px 0px 10px var(--bg-1);
     }
 
     /*RODAPÉ*/
@@ -187,6 +237,26 @@
         margin-bottom: 0px;
         margin-right: 20px;
         padding: 7px;
+    }
+
+    ul.lista__flex {
+        
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul.lista__flex li {
+        padding: 10px;
+    }
+
+    ul.lista__flex div {
+        margin: 0px;
+        transition: 0.4s;
+    }
+
+    ul.lista__flex div:hover {
+        box-shadow: 0px 0px 10px var(--bg-1);
     }
 
 
