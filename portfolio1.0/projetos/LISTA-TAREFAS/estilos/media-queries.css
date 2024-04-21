@@ -72,6 +72,9 @@
 
     div.divisao > h2 {
         font-size: 3em;
+        animation: aparece 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: cover 0% cover 20%;
     }
 
     section.sessao-tarefas {
@@ -124,6 +127,9 @@
         background-color: none;
         background-image: linear-gradient(to left, var(--cor4), transparent 70%);
         font-size: 3.5em;
+        animation: aparece 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: cover 0% cover 20%;
     }
 
     section.sessao-tarefas {

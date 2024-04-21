@@ -106,10 +106,8 @@ div.divisao > h2 {
     text-shadow: 0.5px 0.5px 0px black;
     padding: 12px;
     background-color: var(--cor3);
+    background-image: linear-gradient(to left, var(--cor4), transparent 70%);
     border-radius: 5px;
-    animation: aparece 1s ease-in-out;
-    animation-timeline: view();
-    animation-range: cover 0% cover 20%;
 }
 
 section.sessao-tarefas {
