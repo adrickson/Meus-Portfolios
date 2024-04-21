@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ÁREA DE ANIMAÇÕES */
+
+@keyframes aparece {
+    from {
+        opacity: 0;
+        translate: -100vw 0;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+:root {
+    --cor1: #00010D;
+    --cor2: #3E588C;
+    --cor3: #4D3FA6;
+    --cor4: #252273;
+    --cor5: #0E0D40;
+
+    --fonte-titulos: "Space Grotesk", sans-serif;
+    --fonte-conteudo: "Josefin Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #8e7ef3;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--cor3);
+    border-radius: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor1);
+    color: white;
+}
+
+header.cabecalho {
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor3) 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div.cont_h1_apresentacao {
+    width: 400px;
+    text-align: center;
+}
+
+div.cont_h1_apresentacao > h1 {
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.336);
+    padding: 12px;
+    font-size: 2.5em;
+    animation: aparece ease-in-out 0.7s;
+}
+
+div.conteudo_apresentacao {
+    width: 400px;
+    text-align: center;
+}
+
+div.conteudo_apresentacao > p {
+    text-shadow: 0.5px 0.5px 0px black;
+    font-size: 0.9em;
+    padding: 5px;
+    animation: aparece ease-in-out 1s;
+}
+
+div.divisao {
+    background-color: var(--cor4);
+    text-align: center;
+    padding-block: 7px;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.divisao > h2 {
+    width: 100%;
+    font-family: var(--fonte-titulos);
+    font-weight: bold;
+    font-size: 2.1em;
+    text-shadow: 0.5px 0.5px 0px black;
+    padding: 12px;
+    background-color: var(--cor3);
+    border-radius: 5px;
+    animation: aparece 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
+}
+
+section.sessao-tarefas {
+    background-color: var(--cor5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 15px;
+}
+
+div.lista-tarefas {
+    background-color: white;
+    width: 95%;
+    padding: 15px;
+    border: 1.5px solid var(--cor3);
+    border-radius: 30px;
+}
+
+div.lista-tarefas > p {
+    font-family: var(--fonte-conteudo);
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--cor1);
+    border-bottom: 1px solid var(--cor1);
+    margin-bottom: 15px;
+}
+
+div.botao {
+    background-color: var(--cor5);
+    padding-block: 10px;
+    text-align: center;
+}
+
+div.botao > button {
+    font-family: var(--fonte-conteudo);
+    cursor: pointer;
+    padding: 7px;
+    font-size: 1.5em;
+    background-color: var(--cor3);
+    color: white;
+    border: 2px solid #8e7ef3;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.521);
+    transition: 0.5s ease-in-out;
+}
+
+div.botao > button:hover{
+    background-color: var(--cor4);
+    transform: translateY(-4px);
+    box-shadow: 2.5px 2.5px 3px rgba(0, 0, 0, 0.521);
+}
