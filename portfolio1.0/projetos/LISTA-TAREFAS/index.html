@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-queries.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -32,9 +32,33 @@
         </div>
     </section>
 
-    <div class="botao">
+        <div class="cont_tarefas">
+
+            <div class="cont_tits">
+                <h2>Adicionar Tarefa Abaixo!</h2>
+            </div>
+
+            <form action="" method="get" class="formulario">
+
+                <div class="cont_lab_inp">
+                    <label for="descricao">Descrição: </label>
+                    <input type="text" name="descricao" id="descricao">
+                </div>
+
+                <div class="btnForms">
+                    <button id="finalizar">Finalizar</button>
+                    <button id="cancelar">Cancelar</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    <div class="botao" id="abreJanela">
         <button>Adicionar tarefa</button>
     </div>
+
+    <script src="js/main.js"></script>
 
 </body>
 </html>

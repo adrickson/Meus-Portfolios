@@ -136,6 +136,103 @@ div.lista-tarefas > p {
     margin-bottom: 15px;
 }
 
+div.cont_tarefas {
+    background-image: linear-gradient(45deg, var(--cor4), var(--cor1));
+    border-radius: 20px;
+    border: 2.4px solid crimson;
+    position: absolute;
+    display: none;
+
+    padding: 15px;
+    width: 87%;
+    bottom: -20%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+div.cont_tits {
+    display: block;
+    text-align: center;
+}
+
+div.cont_tits > h2 {
+    font-size: 2em;
+    font-family: var(--fonte-titulos);
+}
+
+form.formulario {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+div.cont_lab_inp {
+    padding: 7px;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.cont_lab_inp > label {
+    font-family: var(--fonte-conteudo);
+    font-size: 1.2em;
+    
+    padding: 7px;
+    margin-bottom: 5px;
+}
+
+div.cont_lab_inp > input {
+    font-size: 1.1em;
+    font-family: var(--fonte-conteudo);
+    color: var(--cor4);
+    font-weight: 600;
+    border-radius: 7px;
+    border: none;
+
+    padding: 5px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+div.cont_lab_inp > input:focus {
+    outline: 3px solid var(--cor3);
+}
+
+div.btnForms {
+    text-align: center;
+}
+
+div.btnForms > button {
+    cursor: pointer;
+    color: white;
+    font-family: var(--fonte-conteudo);
+    font-size: 1.3em;
+    border: 2px solid #8e7ef3;
+    border-radius: 10px;
+    background-color: var(--cor3);
+
+
+    padding: 7px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.521);
+    transition: 0.5s ease-in-out;
+}
+
+div.btnForms > button:hover {
+    background-color: var(--cor4);
+    transform: translateY(-4px);
+    box-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 0.521);
+}
+
+button#finalizar {
+    
+    margin-right: 12px;
+
+}
+
+button#cancelar {
+    margin-left: 12px;
+}
+
 div.botao {
     background-color: var(--cor5);
     padding-block: 10px;
