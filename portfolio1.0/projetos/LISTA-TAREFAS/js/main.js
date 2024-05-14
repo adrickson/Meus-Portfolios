@@ -1,10 +1,13 @@
 const btnAdicionarTarefa = document.querySelector('#abreJanela');
 const contTarefas = document.querySelector('.cont_tarefas');
+const contListaTarefas = document.querySelector('.lista-tarefas') // container onde será adicionado as tarefas enviadas
+const paragrafoTemporario = document.querySelector('#avisoTemporario') // Aviso inserido até enviar o formulário
 
 // Variáveis do formulário de adicionar tarefa
 const formulario = document.querySelector('.formulario');
 const btnFinalizar = document.querySelector('#finalizar');
 const btnCancelar = document.querySelector('#cancelar');
+const caixaInput = document.querySelector('#descricao');
 
 function abreJanela(){
 
@@ -21,10 +24,29 @@ function abreJanela(){
     function fechaJanela(){
         if(contTarefas.style.display == 'block'){
             contTarefas.style.display = 'none';
+            caixaInput.value = '';
         }
     }
 
     btnCancelar.addEventListener('click', fechaJanela);
+
+    // Função de Adicionar tarefa
+
+    function adicionaTarefa(){
+        const texto = caixaInput.value;
+
+        if(texto === ''){
+            paragrafoTemporario.style.display = 'block';
+        } else {
+            paragrafoTemporario.style.display = 'none';
+        }
+        
+    }
+
+    btnFinalizar.addEventListener('click', adicionaTarefa);
+    btnFinalizar.addEventListener('click', fechaJanela);
+
+    // Função para evitar o envio do formulário
 
     function cancelaOperacao(evento) {
         evento.preventDefault(); // Evita o envio do formulário.
