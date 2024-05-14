@@ -1,6 +1,8 @@
 const btnAdicionarTarefa = document.querySelector('#abreJanela');
 const contTarefas = document.querySelector('.cont_tarefas');
-const contListaTarefas = document.querySelector('.lista-tarefas') // container onde será adicionado as tarefas enviadas
+
+const containerPaiDivs = document.querySelector('.lista-tarefas') // container pai onde armazenara os container que ficarão responsáveis por armazenar o conteúdo.
+
 const paragrafoTemporario = document.querySelector('#avisoTemporario') // Aviso inserido até enviar o formulário
 
 // Variáveis do formulário de adicionar tarefa
@@ -39,11 +41,28 @@ function abreJanela(){
             paragrafoTemporario.style.display = 'block';
         } else {
             paragrafoTemporario.innerHTML = `<p>Minhas Tarefas:</p>`;
-            
-            const novaTarefa = document.createElement('p');
-            novaTarefa.innerHTML = texto;
 
-            contListaTarefas.appendChild(novaTarefa);
+            const criaP = document.createElement('p');
+            criaP.innerHTML = texto;
+
+            const iconeEditar = document.createElement('span');
+            iconeEditar.classList.add('material-symbols-outlined');
+            iconeEditar.innerHTML = 'draw';
+
+            const iconeDeletar = document.createElement('span');
+            iconeDeletar.classList.add('material-symbols-outlined');
+            iconeDeletar.innerHTML = 'delete';
+
+            const criaDiv = document.createElement('div');
+            criaDiv.classList.add('armazena_texto');
+
+            criaDiv.appendChild(criaP);
+            criaDiv.appendChild(iconeEditar);
+            criaDiv.appendChild(iconeDeletar);
+            
+            containerPaiDivs.appendChild(criaDiv);
+            
+            
             fechaJanela();
         }
         
