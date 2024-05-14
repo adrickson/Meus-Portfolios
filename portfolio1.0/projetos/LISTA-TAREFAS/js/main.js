@@ -38,13 +38,18 @@ function abreJanela(){
         if(texto === ''){
             paragrafoTemporario.style.display = 'block';
         } else {
-            paragrafoTemporario.style.display = 'none';
+            paragrafoTemporario.innerHTML = `<p>Minhas Tarefas:</p>`;
+            
+            const novaTarefa = document.createElement('p');
+            novaTarefa.innerHTML = texto;
+
+            contListaTarefas.appendChild(novaTarefa);
+            fechaJanela();
         }
         
     }
 
     btnFinalizar.addEventListener('click', adicionaTarefa);
-    btnFinalizar.addEventListener('click', fechaJanela);
 
     // Função para evitar o envio do formulário
 
