@@ -32,6 +32,27 @@ function abreJanela(){
 
     btnCancelar.addEventListener('click', fechaJanela);
 
+    // Função de criar o ícone de editar
+
+    function criaIconeEditar(){
+
+        const iconeEditar = document.createElement('span');
+        iconeEditar.classList.add('material-symbols-outlined');
+        iconeEditar.innerHTML = 'draw';
+
+        return iconeEditar;
+    }
+
+    // Função de criar ícone de deletar
+
+    function ciraIconeDeletar(){
+        const iconeDeletar = document.createElement('span');
+        iconeDeletar.classList.add('material-symbols-outlined');
+        iconeDeletar.innerHTML = 'delete';
+
+        return iconeDeletar;
+    }
+
     // Função de Adicionar tarefa
 
     function adicionaTarefa(){
@@ -45,16 +66,13 @@ function abreJanela(){
             const criaP = document.createElement('p');
             criaP.innerHTML = texto;
 
-            const iconeEditar = document.createElement('span');
-            iconeEditar.classList.add('material-symbols-outlined');
-            iconeEditar.innerHTML = 'draw';
-
-            const iconeDeletar = document.createElement('span');
-            iconeDeletar.classList.add('material-symbols-outlined');
-            iconeDeletar.innerHTML = 'delete';
-
             const criaDiv = document.createElement('div');
             criaDiv.classList.add('armazena_texto');
+
+            const iconeEditar = criaIconeEditar();
+            const iconeDeletar = ciraIconeDeletar();
+
+            iconeEditar.addEventListener('click', abreJanelaDeEditar);
 
             criaDiv.appendChild(criaP);
             criaDiv.appendChild(iconeEditar);
@@ -69,6 +87,36 @@ function abreJanela(){
     }
 
     btnFinalizar.addEventListener('click', adicionaTarefa);
+
+    // CRIANDO FUNÇÃO EXCLUSIVA PARA EXIBIR JANELAS (DIVS, SECTIONS, ETC)
+
+    function abrePopUp(janelaASerAberta){
+        janelaASerAberta.style.display = 'none';
+
+        if (janelaASerAberta.style.display === 'none'){
+            janelaASerAberta.style.display = 'block';
+        }
+
+        return janelaASerAberta;
+    }
+
+    // CRIANDO FUNÇÃO EXCLUSIVA PARA FECHAR JANELAS (DIVS, SECTIONS, ETC)
+
+    function fechaPopUp(janelaASerFechada){
+
+        if(janelaASerFechada.style.display === 'block'){
+            janelaASerFechada.style.display = 'none';
+        }
+    }
+
+    // FUNÇÃO DE APARECER JANELA DE EDITAR TAREFA
+
+    function abreJanelaDeEditar(){
+
+        const janelaDeEdicaoTarefa = document.querySelector('.janelaEditarTarefa');
+        abrePopUp(janelaDeEdicaoTarefa);
+    }
+ 
 
     // Função para evitar o envio do formulário
 

@@ -245,6 +245,19 @@ button#cancelar {
     margin-left: 12px;
 }
 
+div.janelaEditarTarefa{  
+    background-color: #252273;
+    position: absolute;
+    display: none;
+
+    padding: 15px;
+    width: 87%;
+    bottom: -30%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
 div.botao {
     background-color: var(--cor5);
     padding-block: 10px;
