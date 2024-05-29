@@ -24,6 +24,20 @@
     }
 }
 
+@keyframes backgroundAnimado {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* FIM DA ÁREA DE ANIMAÇÕES */
+
 :root {
     --cor1: #00010D;
     --cor2: #3E588C;
@@ -246,7 +260,10 @@ button#cancelar {
 }
 
 div.janelaEditarTarefa{  
-    background-color: #252273;
+    background-image: linear-gradient(45deg, var(--cor5), var(--cor5), var(--cor3), var(--cor2), var(--cor4), var(--cor1));
+    background-size: 300% 300%;
+    animation: backgroundAnimado 17s ease-in-out infinite;
+    border-radius: 20px;
     position: absolute;
     display: none;
 
@@ -256,6 +273,24 @@ div.janelaEditarTarefa{
     left: 50%;
 
     transform: translate(-50%, -50%);
+}
+
+div.mostrandoTarefa {
+    margin: 15px 0px;
+    text-align: center;
+}
+
+div.mostrandoTarefa > p {
+    font-family: var(--fonte-conteudo);
+    font-size: 1.3em;
+}
+
+button.espacoBtn1 {
+    margin-right: 12px;
+}
+
+button.espacoBtn2 {
+    margin-left: 12px;
 }
 
 div.botao {

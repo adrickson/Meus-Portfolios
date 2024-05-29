@@ -11,6 +11,11 @@ const btnFinalizar = document.querySelector('#finalizar');
 const btnCancelar = document.querySelector('#cancelar');
 const caixaInput = document.querySelector('#descricao');
 
+// Variáveis do formulário da Janela de Editar tarefa
+
+const btnCancelarTarefa = document.querySelector('#btnCancelarEdicao');
+const inputEditarTarefa = document.querySelector('#inputEditaTarefa');
+
 function abreJanela(){
 
     // Função para Abrir o PopUp
@@ -116,7 +121,15 @@ function abreJanela(){
         const janelaDeEdicaoTarefa = document.querySelector('.janelaEditarTarefa');
         abrePopUp(janelaDeEdicaoTarefa);
     }
- 
+    
+    // FUNÇÃO DE FECHAR A JANELA DE EDITAR TAREFA
+
+    btnCancelarTarefa.addEventListener('click', function(){
+        const janelaDeEdicaoTarefa = document.querySelector('.janelaEditarTarefa');
+        fechaPopUp(janelaDeEdicaoTarefa);
+
+        inputEditarTarefa.value = '';
+    })
 
     // Função para evitar o envio do formulário
 

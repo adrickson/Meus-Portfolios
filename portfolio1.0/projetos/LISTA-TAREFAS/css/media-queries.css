@@ -47,6 +47,18 @@
         font-size: 2.2em;
     }
 
+    div.btnForms > button {
+        font-size: 1.4em;
+    }
+
+    div.janelaEditarTarefa{
+        width: 700px;
+    }
+
+    div.mostrandoTarefa > p {
+        font-size: 1.4em;
+    }
+
     div.botao {
         padding-block: 15px;
     }
@@ -110,6 +122,18 @@
 
     div.cont_lab_inp > label {
         font-size: 1.4em;
+    }
+
+    div.btnForms > button {
+        font-size: 1.4em;
+    }
+
+    div.janelaEditarTarefa{
+        width: 900px;
+    }
+
+    div.mostrandoTarefa > p {
+        font-size: 1.55em;
     }
 
     div.botao {
@@ -189,6 +213,18 @@
 
     div.cont_lab_inp > input {
         font-size: 1.3em;
+    }
+
+    div.btnForms > button {
+        font-size: 1.5em;
+    }
+
+    div.janelaEditarTarefa{
+        width: 1000px;
+    }
+
+    div.mostrandoTarefa > p {
+        font-size: 1.6em;
     }
 
     div.btnForms > button {
