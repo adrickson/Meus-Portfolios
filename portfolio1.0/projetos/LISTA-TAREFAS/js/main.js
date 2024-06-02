@@ -15,6 +15,9 @@ const caixaInput = document.querySelector('#descricao');
 
 const btnCancelarTarefa = document.querySelector('#btnCancelarEdicao');
 const inputEditarTarefa = document.querySelector('#inputEditaTarefa');
+const btnFinalizarEdicao = document.querySelector('#btnFinalizarEdicao');
+
+let tarefaParaEditar = null;
 
 function abreJanela(){
 
@@ -77,7 +80,9 @@ function abreJanela(){
             const iconeEditar = criaIconeEditar();
             const iconeDeletar = ciraIconeDeletar();
 
-            iconeEditar.addEventListener('click', abreJanelaDeEditar);
+            iconeEditar.addEventListener('click', function (){
+                abreJanelaDeEditar(criaP); // chamando o evento de abrir a janela de editar e passando o paragrafo como parâmetro.
+            });
 
             criaDiv.appendChild(criaP);
             criaDiv.appendChild(iconeEditar);
@@ -114,13 +119,30 @@ function abreJanela(){
         }
     }
 
+
     // FUNÇÃO DE APARECER JANELA DE EDITAR TAREFA
 
-    function abreJanelaDeEditar(){
+    function abreJanelaDeEditar(tarefa){ // A janela de editar está recebendo o parágrafo da div em que o ícone de edição foi clicado.
 
         const janelaDeEdicaoTarefa = document.querySelector('.janelaEditarTarefa');
+        inputEditarTarefa.value = '';
+        tarefaParaEditar = tarefa; // A tarefa que foi definida como null, está recebendo o texto da tarefa
         abrePopUp(janelaDeEdicaoTarefa);
     }
+
+        //FUNÇÃO DE FINALIZAR EDIÇÃO
+
+        btnFinalizarEdicao.addEventListener('click', function(){
+
+            if(tarefaParaEditar){ // Verificando se a tarefa tem o estado True.
+                tarefaParaEditar.innerHTML = inputEditarTarefa.value; // A tarefa da lista de tarefas está recebendo o valor do input da janela de editar terefa.
+                const janelaDeEdicaoTarefa = document.querySelector('.janelaEditarTarefa');
+                fechaPopUp(janelaDeEdicaoTarefa);
+                inputEditarTarefa.value = '';
+                tarefaParaEditar = null;
+            }
+
+        });
     
     // FUNÇÃO DE FECHAR A JANELA DE EDITAR TAREFA
 
