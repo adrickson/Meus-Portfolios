@@ -16,6 +16,7 @@ const caixaInput = document.querySelector('#descricao');
 const btnCancelarTarefa = document.querySelector('#btnCancelarEdicao');
 const inputEditarTarefa = document.querySelector('#inputEditaTarefa');
 const btnFinalizarEdicao = document.querySelector('#btnFinalizarEdicao');
+const txtMostradoJanelaEditar = document.querySelector('#textoASerMostrado');
 
 let tarefaParaEditar = null;
 
@@ -127,6 +128,8 @@ function abreJanela(){
         const janelaDeEdicaoTarefa = document.querySelector('.janelaEditarTarefa');
         inputEditarTarefa.value = '';
         tarefaParaEditar = tarefa; // A tarefa que foi definida como null, está recebendo o texto da tarefa
+        tarefaAserEditada = tarefaParaEditar.innerHTML;
+        txtMostradoJanelaEditar.innerHTML = `" ${tarefaAserEditada} "`;
         abrePopUp(janelaDeEdicaoTarefa);
     }
 

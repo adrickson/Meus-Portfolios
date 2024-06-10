@@ -283,6 +283,7 @@ div.mostrandoTarefa {
 div.mostrandoTarefa > p {
     font-family: var(--fonte-conteudo);
     font-size: 1.3em;
+    margin-bottom: 7px;
 }
 
 button.espacoBtn1 {
